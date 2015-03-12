@@ -1,13 +1,16 @@
-'use strict';
+(function () {
+    'use strict';
 
-/**
- * @ngdoc overview
- * @name jschallengeApp
- * @description
- * # jschallengeApp
- *
- * Main module of the application.
- */
-angular
-
-.module('jschallengeApp', []);
+    angular
+    	.module('jschallengeApp', [ 'ui.router' ])
+    	.config( function( $stateProvider, $urlRouterProvider ) {
+		    $urlRouterProvider.otherwise('/main');
+		    $stateProvider
+		        // main <- starting state
+		        .state('main', {
+		            url: '/main',
+		            templateUrl: '../views/main.html',
+		            controller: 'MainCtrl as main'
+	        } );
+		});
+})();

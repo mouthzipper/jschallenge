@@ -1,5 +1,103 @@
-<div ng-controller='MainCtrl as main'>
-	<div ng-repeat='data in main.data'>
-		<div>{{data}}</div>
-	</div>
+<!-- <div class="container">
+	<div class="row-fluid">
+        <div class="span8">
+        	<div my-map="" class="angular-map-container">test</div>
+    	</div>
+    	
+      	<div class="span4">
+    		<ul class="list">
+			   <li ng-repeat="location in main.locations">
+			     <h2>{{ location.parking_shortname}}</h2>
+	    		<address>
+	    			<strong>{{location.parking_name}}</strong><br>
+	    			Cars Available: {{location.cars_available}}
+	    		</address>
+			   </li>
+			</ul>
+
+    	</div>
+    </div>
+</div> -->
+<!-- begin template -->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header"><a class="navbar-brand" href="#">CarPark</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li>&nbsp;</li>
+      </ul>
+      <form class="navbar-form">
+        <div class="form-group" style="display:inline;">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-down"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+                <li><a href="#">Category 4</a></li>
+                <li><a href="#">Category 5</a></li> 
+              </ul>
+            </div>
+            <input type="text" class="form-control" placeholder="What are searching for?">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
+          </div>
+        </div>
+      </form>
+    </div>
 </div>
+<div my-map></div>
+<div class="container-fluid" id="main">
+  <div class="row">
+  	<div class="col-xs-4" id="left">
+    
+      <h2>CAR at your nearest place.</h2>
+      
+            <div class="list">
+			   <div ng-repeat="location in main.locations">
+			     <div class="panel panel-default">
+			        <div class="panel-heading"><a href="">{{location.parking_shortname}}</a></div>
+			      </div>
+			      <p>Parking Name: {{location.parking_name}}</p><br/>
+			      <p>Parking Code: {{location.code}}</p><br/>
+			       <p>Car/s Available: {{location.cars_available}}</p><br/>
+			      <hr> 
+			   </div>
+			</div>
+
+    </div>
+    <div class="col-xs-8">
+    </div>
+    
+  </div>
+</div> 
+<!-- end template -->
+
+<!-- <div class="container">
+	<div class="row-fluid">
+        <div class="span8">
+        	<div my-map=""></div>
+    	</div>
+    	
+      	<div class="span4">
+    		<ul class="list">
+			   <li ng-repeat="location in main.locations">
+			     <h2>{{ location.parking_shortname}}</h2>
+	    		<address>
+	    			<strong>{{location.parking_name}}</strong><br>
+	    			Cars Available: {{location.cars_available}}
+	    		</address>
+			   </li>
+			</ul>
+
+    	</div>
+    </div>
+</div> -->
